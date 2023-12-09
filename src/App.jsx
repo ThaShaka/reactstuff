@@ -1,20 +1,16 @@
-import logo from "./react-logo.png"
-
+import Header from "./components/Header"
+import Footer from "./components/Footer"
+import MainContent from "./components/MainContent"
 function App() {
-  
   return (
-    <div>
-      <img src={logo} alt="" width={"40px"} />
-      <h1>Fun facts about React</h1>
-      <ul>
-        <li>Was first released in 2013</li>
-        <li>Was originally created by Jordan Walke</li>
-        <li>Has well over 100k stars on GitHub</li>
-        <li>Is maintained by Facebook</li>
-        <li>Powers thousands of enterprise apps, inlucding mobile apps</li>
-      </ul>
-    </div>
+    <main id="pageMain">
+    <Header />
+    <MainContent />
+      
+    <Footer />
+    </main>
   )
 }
+
 
 export default App

@@ -1,0 +1,46 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.nav-items {
+    list-style: none;
+    display: flex;
+    gap: 1em;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.reactLogo {
+    max-height: 80px;
+}
+
+.header {
+    padding: 5px 1em;
+    box-shadow: 0 2px 1px 1px rgba(0, 0, 0, 0.247);
+}
+
+#pageMain {
+    position: relative;
+    min-height: 100vh;  
+}
+
+.footer {
+    position: absolute;
+    padding: 1em;
+    width: 100%;
+    bottom: 0;
+    background-color: #01D3FF;
+}
+
+.mainContent {
+    width: 90%;
+    margin: 2em auto 0;
+}
