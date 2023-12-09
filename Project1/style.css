@@ -1,0 +1,60 @@
+:root {
+    font-family: 'Inter', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #282D35;
+
+}
+
+main {
+    min-height: 100vh;
+    color: white;
+    background: url("./public/react-icon-large.png") no-repeat ;
+    background-position: right 50%;
+}
+
+header {
+    display: flex;
+    background-color: #21222A;
+    justify-content: space-between;
+    padding: 5px 1em;
+    color: white;
+}
+
+header .logo {
+    display: flex;
+    gap: 10px;
+    color: #00D8FF;
+}
+
+.mainContent {
+    width: 90%;
+    margin: 30px auto 0;
+    
+}
+
+.mainContent ul  {
+    font-size: 1.5rem;
+    max-width: 70%;
+}
+
+.mainContent h1 {
+    font-size: 3rem;
+}
+
+
+
+.mainContent ul li:not(:first-child) {
+    margin-top: 10px;
+}
+
+li::marker {
+    color: #00D8FF;
+    font-size: 2rem;
+}
