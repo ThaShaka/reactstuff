@@ -1,0 +1,88 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+}
+
+header {
+    box-shadow: 0 0 3px 1px rgba(185, 185, 185, 0.616);
+    padding: 1em;
+}
+
+
+.hero {
+    width: 80%;
+    margin: 1rem auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.heroImg {
+    width: 100%;
+    height: auto;
+}
+
+.heroText {
+    align-self: flex-start;
+}
+
+.heroText h1 {
+    font-size: 2rem;
+}
+
+.cardCarousel {
+    padding: 2.5rem;
+}
+
+.card .img img {
+    border-radius: 10px;
+    width: 100%;
+}
+
+.card {
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+#starLogo {
+    height: 15px;
+}
+
+#status {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: white;
+    padding: 2px 4px;
+    font-weight: 300;
+    border-radius: 3px;
+}
+
+p {
+    margin: 0;
+}
+
+.card .info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.info p:first-child span {
+    color: rgba(95, 95, 95, 0.788);
+}
+
+.info p:nth-child(2) {
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+.info p:last-child {font-weight: 300;}
+.info p:last-child  span {font-weight: 500;}
+
