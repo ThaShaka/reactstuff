@@ -35,7 +35,12 @@ header {
 }
 
 .cardCarousel {
-    padding: 2.5rem;
+    width: 80%;
+    margin: 1rem auto;
+    padding: 1.5rem 0;
+    display: flex;
+    overflow-x: scroll;
+    gap: 2em;
 }
 
 .card .img img {
@@ -44,6 +49,7 @@ header {
 }
 
 .card {
+    min-width: 350px;
     width: fit-content;
     display: flex;
     flex-direction: column;
