@@ -1,8 +1,10 @@
 import React from 'react'
 import memeData from "./memeData"
+function getMeme() {
+    document.getElementById("memeImg").src = memeData.data.memes[Math.floor(Math.random()*100 )+1].url
+}
 
 const Main = () => {
-    getMeme()
     return <main>
         <div className="inputs">
             <section className="upperText">
@@ -22,8 +24,5 @@ const Main = () => {
     </main>
 }
 
-function getMeme() {
-    document.getElementById("memeImg").src = memeData.data.memes[Math.floor(Math.random()*100 )+1].url
-}
 
 export default Main
