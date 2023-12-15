@@ -18,6 +18,7 @@ const Counter = () => {
   function sub() {
     setCount(prevCount => --prevCount)
   }
+  console.log("Rendered")
   return (
     <main>
       <div className="counter">

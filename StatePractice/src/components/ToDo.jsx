@@ -2,9 +2,7 @@ import React from 'react'
 import { useState } from 'react'
 
 const ToDo = () => {
-    
     const [thing, setThing] = useState(["Thing 1", "Thing 2"]);
-
     function addItem() {
         setThing(prevThing =>{return [...thing, `Thing ${prevThing.length+1} `]})
     }
