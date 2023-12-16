@@ -1,12 +1,15 @@
-import React from 'react'
 
-const Box = ({key, on}) => {
+const Box = ({on, toggle, id}) => {
+   
+
+   
     const styles = {
-        backgroundColor: on ? "#222222" : "none",
-    }
+      backgroundColor: on ? "#222222" : "white",
+  }
   return (
-    <div key={key} className="box" style={styles}></div>
+    <div className="box" style={styles} onClick={()=>toggle(id)} ></div>
   )
+  
 }
 
 export default Box
