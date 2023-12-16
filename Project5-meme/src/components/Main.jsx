@@ -1,6 +1,4 @@
-import React from 'react'
-import memeData from "./memeData"
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 
 const Main = () => {
@@ -18,7 +16,13 @@ const Main = () => {
         }})
     }
 
-    const [allMemeImages, setAllMemeImages] = useState(memeData);
+    const [allMemeImages,setAllMemeImages] = useState({});
+
+    useEffect(() => {
+        fetch("https://api.imgflip.com/get_memes")
+            .then(res => res.json())
+            .then(data=>setAllMemeImages(data))
+    }, []);
 
     const [meme, setMeme] = useState({
         topText: "",
