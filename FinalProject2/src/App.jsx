@@ -4,6 +4,7 @@ import {nanoid} from "nanoid";
 import Sidebar from "./components/Sidebar.jsx";
 import Editor from "./components/Editor.jsx"
 import {data} from "./data.jsx";
+
 function App() {
 
     const [notes, setNotes] = useState([])
@@ -39,26 +40,24 @@ function App() {
             {
                 notes.length > 0
                     ?
-                    <Split
-                        sizes={[30, 70]}
-                        direction="horizontal"
-                        className="split"
-                    >
-                        <Sidebar
-                            notes={notes}
-                            currentNote={findCurrentNote()}
-                            setCurrentNoteId={setCurrentNoteId}
-                            newNote={createNewNote}
-                        />
-                        {
-                            currentNoteId &&
-                            notes.length > 0 &&
-                            <Editor
+                   
+                        <div className="split">
+                            <Sidebar
+                                notes={notes}
                                 currentNote={findCurrentNote()}
-                                updateNote={updateNote}
+                                setCurrentNoteId={setCurrentNoteId}
+                                newNote={createNewNote}
                             />
-                        }
-                    </Split>
+                            {
+                                currentNoteId &&
+                                notes.length > 0 &&
+                                <Editor
+                                    currentNote={findCurrentNote()}
+                                    updateNote={updateNote}
+                                />
+                            }
+                        </div>
+             
                     :
                     <div className="no-notes">
                         <h1>You have no notes</h1>
