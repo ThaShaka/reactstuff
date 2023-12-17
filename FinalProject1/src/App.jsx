@@ -7,8 +7,7 @@ function App() {
 
     function toggleDarkMode() {
 
-        setDarkMode(prevmode => !prevmode)
-        console.log(darkMode)
+        setDarkMode(prevMode => !prevMode)
     }
     return <div className="container">
             <Navbar mode={darkMode}  toggle={toggleDarkMode}/>

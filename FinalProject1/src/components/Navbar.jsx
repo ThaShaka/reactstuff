@@ -1,7 +1,6 @@
 import navLogo from "./../images/react-icon-small.png";
 
 function Navbar(props) {
-    console.log(props.toggle)
     return <nav
         /* eslint-disable-next-line react/prop-types */
         className={props.mode ? "dark" : ""}>
@@ -19,7 +18,7 @@ function Navbar(props) {
             <div
                 className="toggler--slider"
                 /* eslint-disable-next-line react/prop-types */
-                onClick={()=>props.toggle}
+                onClick={props.toggle}
             >
                 <div className="toggler--slider--circle"></div>
             </div>
