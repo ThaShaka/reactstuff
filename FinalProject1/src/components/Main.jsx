@@ -1,6 +1,9 @@
-
-function Main({darkMode}) {
-    return  <main className={darkMode ? "dark" : ""}>
+// import logoLight from "./../images/react-icon-light.png"
+// import logoDark from "./../images/react-icon-dark.png"
+function Main(props) {
+    return  <main className=
+                      /* eslint-disable-next-line react/prop-types */
+                      {props.mode ? "dark" : ""}>
         <h1 className="main--title">Fun facts about React</h1>
         <ul className="main--facts">
             <li>Was first released in 2013</li>
