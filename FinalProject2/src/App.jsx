@@ -2,7 +2,8 @@
 import {useState} from "react";
 import {nanoid} from "nanoid";
 import Sidebar from "./components/Sidebar.jsx";
-import Split from "react"
+import Editor from "./components/Editor.jsx"
+import {data} from "./data.jsx";
 function App() {
 
     const [notes, setNotes] = useState([])
