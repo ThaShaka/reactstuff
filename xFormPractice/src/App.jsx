@@ -1,4 +1,3 @@
-import Form from "./components/Form"
 import SignUp from './components/SignUp';
 
 function App() {
