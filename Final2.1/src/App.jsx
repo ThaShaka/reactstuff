@@ -31,12 +31,15 @@ export default function App() {
         event.stopPropagation()
         //notes.pop(notes.indexOf(notes))
         console.log(noteId)
+        notes.forEach(note=>{
+            if(note.id===noteId.id) notes.pop()
+        })
     }
 
     function updateNote(text) {
         //Puts lats modified note on top
        setNotes(oldNotes => {
-           var arr = [];
+           const arr = [];
            for(let i = 0; i < oldNotes.length; i++) {
             if (oldNotes[i].id === currentNoteId) {
                 arr.unshift({...oldNotes[i], body: text})
