@@ -12,21 +12,31 @@ function App() {
         isRunning: false,
     })
     const intervalRef = useRef(0);
-
     function startTimer() {
-        intervalRef.current = setInterval(()=>{
-            setTimer(prevState =>( {
-                    value: prevState.value++,
-                    ...prevState
+        useEffect(() => {
+            setTimer(prevState => ({
+                value: prevState.value,
+                isRunning: true
+            }));
 
-            }))
-        }, 1000)
+            const interval = setInterval(() => {
+                setTimer(prevState => ({
+                    value: prevState.value + 1,
+                    isRunning: prevState.isRunning
+                }));
+            }, 1000);
+
+            return () => {
+                clearInterval(interval);
+                setTimer(prevState => ({
+                    value: prevState.value,
+                    isRunning: false
+                }));
+            };
+        }, []);
     }
-    function stopTimer() {
-        clearInterval(intervalRef.current);
-        intervalRef.current = 0;
-        setTimer({value:0, isRunning: false})
-    }
+
+
 
     useEffect(() => {
        const allHeld = dice.every(die=> die.isHeld);
@@ -100,7 +110,7 @@ function App() {
 
             }}>{tenzies ? "New game" : "Roll"}</button>
             <button onClick={startTimer}>Start</button>
-            <button onClick={stopTimer}>Start</button>
+            <button >Start</button>
         </section>
         <dialog className="leaderboard modal">
         <h1>GGWP</h1>
@@ -118,5 +128,6 @@ function App() {
 
     </main>)
 }
+
 
 export default App
