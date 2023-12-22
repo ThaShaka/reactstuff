@@ -1,0 +1,125 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+
+}
+
+body {
+    background-color: #0B2434;
+    padding: 20px;
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+}
+
+main {
+    position: relative;
+    background-color: #F5F5F5;
+    max-width: 600px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem;
+    justify-content: space-around;
+}
+
+.dices {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 10px;
+
+}
+
+.dice {
+    justify-self: center;
+    display: flex;
+    place-content: center;
+    background: #fff;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.15);
+    width: 50px;
+    height: 50px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.info {
+    text-align: center;
+    h1{
+        font-size: 3rem;
+    }
+    p {
+        width: 50%;
+        margin: 0 auto;
+    }
+}
+
+
+.button {
+    display: flex;
+    justify-content: center;
+
+    button:hover {
+        background: #6958d9;
+    }
+}
+
+button {
+    cursor: pointer;
+    background: #5035FF;
+    padding: 10px 2rem;
+    color: #fff;
+    border: none;
+    font-size: 1.6rem;
+    font-weight: 500;
+    border-radius: 5px;
+}
+
+.openModal {
+    align-self: flex-end;
+    background: none;
+    color: #5035FF;
+    font-size: 2rem;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    :hover {
+        scale: 1.2;
+    }
+}
+
+
+.leaderboard {
+    left: 50%;
+    top: 50%;
+    translate: -50% -50%;
+}
+
+::backdrop {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.modal {
+    left: 50%;
+    top: 50%;
+    translate: -50% -50%;
+    border: none;
+}
+
+.currentGame {
+    padding: 1rem;
+    text-align: center ;
+
+    h2 {
+        font-size: 2rem;
+        margin: 0.6em;
+    }
+
+    p {
+        margin: 0.6em;
+        font-size: 1.5rem;
+    }
+}
+
+
