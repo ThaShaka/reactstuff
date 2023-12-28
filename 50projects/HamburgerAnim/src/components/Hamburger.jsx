@@ -1,7 +1,7 @@
 import { FaBars } from "react-icons/fa6";
 import { IoCloseSharp } from "react-icons/io5";
 function Hamburger({isToggled, toggle}) {
-    return <nav className={`${toggle ? "toggledBtn" : "untoggled"}`}>
+    return <nav className={`${toggle ? "toggledBtn" : "untoggledBtn"}`}>
         <button onClick={isToggled}>
             <FaBars size={"30px"}  />
         </button>

@@ -22,12 +22,13 @@ section {
 }
 
 #root {
-    background: #0B2434;
+    background: #333;
+    overflow: hidden;
+
 }
 
 main {
     background: #fff;
-    overflow: hidden;
 }
 
 nav {
@@ -37,9 +38,9 @@ nav {
     background: #FF7979;
     color:white;
     border-radius: 50%;
-    translate: -50% -50%;
     position: fixed;
     inset:0;
+    translate: -50% -50%;
     transition: 500ms;
 }
 
@@ -54,14 +55,19 @@ button {
 }
 
 .toggledBtn {
-    transform: rotate(-80deg);
+    transform: rotate(-90deg);
+    transition: transform 500ms;
+}
+
+
+.untoggledBtn {
+    transform: rotate(0deg);
     transition: transform 500ms;
 }
 
 .close {
-    left: 45px;
-    bottom: 30px;
-    rotate: -10deg;
+    left: 25px;
+    bottom: 40px;
 }
 
 .toggled {
@@ -74,4 +80,49 @@ button {
     transform: rotate(0deg);
     transform-origin: top left;
     transition: transform 500ms;
+}
+
+.nav {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    position: fixed;
+    top: 500px;
+    left: 20px;
+    z-index: 100;
+    a {
+        text-decoration: none;
+        color: black;
+        font-size: 1.15rem;
+    }
+
+    :nth-child(2) {
+        animation: move 100ms 300ms ease-in forwards;
+    }
+
+    :nth-child(3) {
+        animation: move2 100ms 300ms ease-in forwards;
+    }
+}
+
+
+
+@keyframes move {
+    0% {
+        transform: translateX(0px);
+    }
+    100% {
+        transform: translateX(20px);
+    }
+
+}
+
+@keyframes move2 {
+    0% {
+        transform: translateX(0px);
+    }
+    100% {
+        transform: translateX(40px);
+    }
+
 }
