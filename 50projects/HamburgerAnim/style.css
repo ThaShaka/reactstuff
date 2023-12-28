@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+img {
+    width: 100%;
+}
+
+body {
+    font-family: "Lato", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+section {
+    padding: 4em 2em;
+    width: 80%;
+    margin: 0 auto;
+
+}
+
+#root {
+    background: #0B2434;
+}
+
+main {
+    background: #fff;
+    overflow: hidden;
+}
+
+nav {
+    z-index: 5;
+    height: 200px;
+    width: 200px;
+    background: #FF7979;
+    color:white;
+    border-radius: 50%;
+    translate: -50% -50%;
+    position: fixed;
+    inset:0;
+    transition: 500ms;
+}
+
+button {
+    position: absolute;
+    right: 45px;
+    bottom: 30px;
+    border: none;
+    background: none;
+    color: white;
+    cursor: pointer;
+}
+
+.toggledBtn {
+    transform: rotate(-80deg);
+    transition: transform 500ms;
+}
+
+.close {
+    left: 45px;
+    bottom: 30px;
+    rotate: -10deg;
+}
+
+.toggled {
+   transform: rotate(-20deg);
+    transform-origin: top left;
+    transition: transform 500ms;
+}
+
+.untoggled {
+    transform: rotate(0deg);
+    transform-origin: top left;
+    transition: transform 500ms;
+}
