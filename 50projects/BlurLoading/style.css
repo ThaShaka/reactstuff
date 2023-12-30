@@ -1,0 +1,54 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    position: relative;
+    z-index: 2;
+}
+
+img {
+    position: absolute;
+    width: 100%;
+    inset: 0;
+    z-index: 3;
+    filter: blur(20px);
+    animation: blur forwards 10s cubic-bezier(.91,.98,.81,.64);
+    height: 100vh;
+}
+
+.counter {
+    font-size: 3rem;
+    z-index: 5;
+    animation: disappear 10s  forwards ;
+    animation-timing-function: cubic-bezier(.91,.98,.81,.64);
+}
+
+@keyframes disappear {
+     0% {
+         opacity: 1;
+     }
+
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes blur {
+    0% {
+        filter: blur(20px);
+    }
+
+    100% {
+        filter: blur(0px);
+    }
+}
