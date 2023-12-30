@@ -1,0 +1,114 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+main {
+    background : #F6F6F6;
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+}
+
+h2,h3,h4 {
+    font-weight: 400;
+}
+
+hr {
+    height: 1px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+
+}
+
+article.tracker {
+    min-width: 300px;
+    width: 15%;
+    padding-top: 2rem;
+    > h3 {
+        text-align: center;
+    }
+}
+
+.balance {
+    margin-top: 1em;
+}
+
+.info {
+    margin-top: 1em;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 10px;
+    background: white ;
+    box-shadow: 0 3px 5px 2px rgb(0 0 0 / 0.15);
+    padding: 0.5em;
+
+
+    .income h4:last-child{
+        color: #24c924;
+    }
+
+    .expense h4:last-child{
+        color: #e12020;
+    }
+}
+
+.history {
+    margin-top: 2em;
+
+    .item {
+        box-shadow: 0 1px 3px  rgb(0 0 0 / 0.15);
+        background: #fff;
+        font-size: 12px;
+        padding: 5px 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .item + .item {
+        margin-top: 5px;
+    }
+
+}
+
+.transactions {
+    margin-top: 1em;
+
+    input {
+        width: 100%;
+        border: 1px solid   slategray;
+        padding: 10px 15px;
+        margin-block: 5px;
+        font-size: 1.2rem;
+    }
+
+    p {
+        font-size: 10px;
+    }
+
+    label {
+        display: block;
+    }
+}
+
+button {
+    margin-top: 1rem;
+    width: 100%;
+    background: #816ED7;
+    padding: 10px 15px;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+button:hover {
+    filter: brightness(79%);
+}
+
+:focus {
+    outline: 2px solid #5035FF;
+}
